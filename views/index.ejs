@@ -1,0 +1,36 @@
+
+    <%- include('include/header') %>
+
+
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav justify-between">
+                <a href="/add-user" class="btn border-shadow title_new_user">
+                    Add User <i class="fas fa-user"></i></span>
+                </a>
+            </div>    
+            <div class="form-title text-center">
+                <h2 class="text-dark">List User Of System</h2>
+                <span class="text-light">User account include: ID, Name, Email, Gender, Status, Action</span>
+            </div>
+            
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/show') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<%- include('include/footer') %>
